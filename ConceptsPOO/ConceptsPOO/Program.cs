@@ -17,7 +17,8 @@ Employee employee1 = new SalaryEmployee()
     Salary = 34025.15m
 };
 
-Console.WriteLine(employee1);
+//Console.WriteLine(employee1);
+
 Employee employee2 = new CommissionEmployee()
 {
     Id = 2346,
@@ -31,6 +32,56 @@ Employee employee2 = new CommissionEmployee()
     
 };
 
-Console.WriteLine(employee2);
+//Console.WriteLine(employee2);
+Employee employee3 = new HourlyEmployee()
+{
+    Id = 2347,
+    FirtName = "Juana",
+    LastName = "Jorge",
+    BirthDate = new Date(1978, 3, 5),
+    HiringDate = new Date(2012, 12, 4),
+    IsActive = true,
+    HourValue = 12856.25m,
+    Hour = 123.5f
+
+};
+
+//Console.WriteLine(employee3);
+Employee employee4 = new BaseCommissionEmployee()
+{
+    Id = 2348,
+    FirtName = "Nelson",
+    LastName = "Dominguez",
+    BirthDate = new Date(1978, 3, 5),
+    HiringDate = new Date(2012, 12, 4),
+    IsActive = true,
+    Base = 8650m,
+    Sales =7658.98m,
+    CommissionPercentaje = 0.015f,
+
+
+};
+
+//Console.WriteLine(employee4);
+
+ICollection<Employee> employees = new List<Employee>()
+{
+    employee1, employee2, employee3, employee4
+};
+
+decimal payroll = 0;
+
+foreach (Employee employee in employees)
+{
+    Console.WriteLine(employee);
+    payroll+=employee.GetValueToPay();
+}
+
+Console.WriteLine("                                =================");
+Console.WriteLine($"TOTAL                          {$"{payroll:c2}", 18}");
+
+
+
+
 
 

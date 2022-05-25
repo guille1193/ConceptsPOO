@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConceptsPOO
 {
-    public abstract class Employee
+    public abstract class Employee:Ipay
     {
         public int Id { get; set; }
         public string FirtName { get; set; }
@@ -18,6 +18,11 @@ namespace ConceptsPOO
         public bool IsActive { get; set; }
 
         public abstract decimal GetValueToPay();
+
+        public decimal Getvaluetopay()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString()
         {
