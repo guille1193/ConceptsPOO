@@ -80,6 +80,22 @@ foreach (Employee employee in employees)
 Console.WriteLine("                                =================");
 Console.WriteLine($"TOTAL                          {$"{payroll:c2}", 18}");
 
+Invoice Invoice1 = new Invoice()
+{
+    Description = "I Phone 13",
+    Id = 1,
+    Price = 80000M,
+    Quantity = 6
+};
+Invoice Invoice2 = new Invoice()
+{
+    Description = "Arena Gruesa",
+    Id = 2,
+    Price = 1050M,
+    Quantity = 20
+};
+Console.WriteLine(Invoice1);
+Console.WriteLine(Invoice2);
 
 
 
